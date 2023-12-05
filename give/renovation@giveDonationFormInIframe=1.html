@@ -1,0 +1,898 @@
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Renovation Project</title>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel='stylesheet' id='give-styles-css' href='../wp-content/plugins/give/assets/dist/css/give.css@ver=3.1.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='give-donation-summary-style-frontend-css' href='../wp-content/plugins/give/assets/dist/css/give-donation-summary.css@ver=3.1.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='give-fee-recovery-css' href='../wp-content/plugins/give-fee-recovery/assets/css/give-fee-recovery-frontend.min.css@ver=1.9.7.css' type='text/css' media='all' />
+<link rel='stylesheet' id='give-gift-aid-css' href='../wp-content/plugins/give-gift-aid/assets/css/give-gift-aid-frontend.min.css@ver=1.3.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='give_recurring_css-css' href='../wp-content/plugins/give-recurring/assets/css/give-recurring.min.css@ver=2.2.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='give-google-font-montserrat-css' href='https://fonts.googleapis.com/css?family=Montserrat%3A400%2C500%2C600%2C700&#038;display=swap&#038;ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='give-sequoia-template-css-css' href='https://www.dlca.co.uk/wp-content/plugins/give/assets/dist/css/give-sequoia-template.css?ver=3.1.1' type='text/css' media='all' />
+<style id='give-sequoia-template-css-inline-css' type='text/css'>
+
+			.seperator {
+				background: #28C77B !important;
+			}
+			.give-btn {
+				border: 2px solid #28C77B !important;
+				background: #28C77B !important;
+			}
+			.give-btn:hover {
+				background: #28C77B !important;
+			}
+			.give-btn:focus {
+				box-shadow: 0 0 8px #28C77B;
+			}
+			.payment .give-gateway-option-selected:focus-within .give-gateway-option::before,
+			.choose-amount .give-total-wrap .give-donation-amount:focus-within {
+				border-color: #28C77B !important;
+			}
+			.give-donation-level-btn {
+				border: 2px solid #28C77B !important;
+			}
+			.give-donation-level-btn.give-default-level {
+				color: #28C77B !important;
+				background: #fff !important;
+				transition: background 0.2s ease, color 0.2s ease;
+			}
+			.give-donation-level-btn.give-default-level:hover {
+				color: #28C77B !important; background: #fff !important;
+			}
+			.give-input:focus, .give-select:focus {
+				border: 1px solid #28C77B !important;
+			}
+			.checkmark {
+				border-color: #28C77B !important;
+				color: #28C77B !important;
+			}
+			input[type='radio'] + label::after,
+			[data-field-type='radio'] label::after{
+				background: #28C77B !important;
+			}
+			input[type='radio']:focus + label::before{
+				border-color: #28C77B;
+			}
+			a {
+				color: #28C77B;
+			}
+			.give-square-cc-fields:focus,
+			.give-stripe-cc-field:focus,
+			.give-stripe-single-cc-field-wrap:focus,
+			form[id*="give-form"] .form-row textarea:focus,
+			form[id*="give-form"] .form-row textarea.required:focus,
+			form[id*="give-form"] .form-row input:focus,
+			form[id*="give-form"] .form-row input.required:focus,
+			#give-recurring-form .form-row textarea:focus,
+			#give-recurring-form .form-row textarea.required:focus,
+			#give-recurring-form .form-row input:focus,
+			#give-recurring-form .form-row input.required:focus,
+			form.give-form .form-row textarea:focus,
+			form.give-form .form-row textarea.required:focus,
+			form.give-form .form-row input:focus,
+			form.give-form .form-row input.required:focus,
+			.form-row select, #give-recurring-form .form-row select:focus,
+			form.give-form .form-row select:focus,
+			.form-row select.required:focus,
+			#give-recurring-form .form-row select.required:focus,
+			form.give-form .form-row select.required:focus,
+			.give-select:focus,
+			.give-input-field-wrapper.has-focus,
+			[data-field-type="checkbox"] label:focus-within::before,
+			[data-field-type="radio"] label:focus-within::before {
+				border-color: #28C77B !important;
+			}
+			
+			.payment [id*='give-create-account-wrap-'] label::after {
+				background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A");
+			}
+			#give_terms_agreement:hover,
+			#give_terms_agreement:focus-within,
+			#give_terms_agreement.active {
+				border: 1px solid #28C77B !important;
+			}
+			#give_terms_agreement input[type='checkbox']:focus + label::before {
+				border-color: #28C77B;
+			}
+			#give_terms_agreement input[type='checkbox'] + label::after,
+			#give-anonymous-donation-wrap label::after,
+			[data-field-type='checkbox'] label.active:after {
+				background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A") !important;
+			}
+			#give-anonymous-donation-wrap label:focus-within::before {
+				border-color: #28C77B !important;
+			}
+		
+				.give-recurring-donors-choice:hover,
+				.give-recurring-donors-choice:focus-within,
+				.give-recurring-donors-choice.active {
+					border: 1px solid #28C77B;
+				}
+				.give-recurring-donors-choice .give-recurring-donors-choice-period:focus,
+				.give-recurring-donors-choice input[type='checkbox']:focus + label::before {
+					border-color: #28C77B;
+				}
+				.give-recurring-donors-choice input[type='checkbox'] + label::after {
+					background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A");
+				}
+			
+				.give-fee-recovery-donors-choice.give-fee-message:hover,
+				.give-fee-recovery-donors-choice.give-fee-message:focus-within,
+				.give-fee-recovery-donors-choice.give-fee-message.active {
+					border: 1px solid #28C77B;
+				}
+				.give-fee-message-label input[type='checkbox']:focus + span::before {
+					border-color: #28C77B;
+				}
+				.give-fee-recovery-donors-choice.give-fee-message input[type='checkbox'] + .give-fee-message-label-text::after {
+					background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A");
+				}
+			body, button, input, select{font-family: 'Montserrat', sans-serif;}
+
+			.seperator {
+				background: #28C77B !important;
+			}
+			.give-btn {
+				border: 2px solid #28C77B !important;
+				background: #28C77B !important;
+			}
+			.give-btn:hover {
+				background: #28C77B !important;
+			}
+			.give-btn:focus {
+				box-shadow: 0 0 8px #28C77B;
+			}
+			.payment .give-gateway-option-selected:focus-within .give-gateway-option::before,
+			.choose-amount .give-total-wrap .give-donation-amount:focus-within {
+				border-color: #28C77B !important;
+			}
+			.give-donation-level-btn {
+				border: 2px solid #28C77B !important;
+			}
+			.give-donation-level-btn.give-default-level {
+				color: #28C77B !important;
+				background: #fff !important;
+				transition: background 0.2s ease, color 0.2s ease;
+			}
+			.give-donation-level-btn.give-default-level:hover {
+				color: #28C77B !important; background: #fff !important;
+			}
+			.give-input:focus, .give-select:focus {
+				border: 1px solid #28C77B !important;
+			}
+			.checkmark {
+				border-color: #28C77B !important;
+				color: #28C77B !important;
+			}
+			input[type='radio'] + label::after,
+			[data-field-type='radio'] label::after{
+				background: #28C77B !important;
+			}
+			input[type='radio']:focus + label::before{
+				border-color: #28C77B;
+			}
+			a {
+				color: #28C77B;
+			}
+			.give-square-cc-fields:focus,
+			.give-stripe-cc-field:focus,
+			.give-stripe-single-cc-field-wrap:focus,
+			form[id*="give-form"] .form-row textarea:focus,
+			form[id*="give-form"] .form-row textarea.required:focus,
+			form[id*="give-form"] .form-row input:focus,
+			form[id*="give-form"] .form-row input.required:focus,
+			#give-recurring-form .form-row textarea:focus,
+			#give-recurring-form .form-row textarea.required:focus,
+			#give-recurring-form .form-row input:focus,
+			#give-recurring-form .form-row input.required:focus,
+			form.give-form .form-row textarea:focus,
+			form.give-form .form-row textarea.required:focus,
+			form.give-form .form-row input:focus,
+			form.give-form .form-row input.required:focus,
+			.form-row select, #give-recurring-form .form-row select:focus,
+			form.give-form .form-row select:focus,
+			.form-row select.required:focus,
+			#give-recurring-form .form-row select.required:focus,
+			form.give-form .form-row select.required:focus,
+			.give-select:focus,
+			.give-input-field-wrapper.has-focus,
+			[data-field-type="checkbox"] label:focus-within::before,
+			[data-field-type="radio"] label:focus-within::before {
+				border-color: #28C77B !important;
+			}
+			
+			.payment [id*='give-create-account-wrap-'] label::after {
+				background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A");
+			}
+			#give_terms_agreement:hover,
+			#give_terms_agreement:focus-within,
+			#give_terms_agreement.active {
+				border: 1px solid #28C77B !important;
+			}
+			#give_terms_agreement input[type='checkbox']:focus + label::before {
+				border-color: #28C77B;
+			}
+			#give_terms_agreement input[type='checkbox'] + label::after,
+			#give-anonymous-donation-wrap label::after,
+			[data-field-type='checkbox'] label.active:after {
+				background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A") !important;
+			}
+			#give-anonymous-donation-wrap label:focus-within::before {
+				border-color: #28C77B !important;
+			}
+		
+				.give-recurring-donors-choice:hover,
+				.give-recurring-donors-choice:focus-within,
+				.give-recurring-donors-choice.active {
+					border: 1px solid #28C77B;
+				}
+				.give-recurring-donors-choice .give-recurring-donors-choice-period:focus,
+				.give-recurring-donors-choice input[type='checkbox']:focus + label::before {
+					border-color: #28C77B;
+				}
+				.give-recurring-donors-choice input[type='checkbox'] + label::after {
+					background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A");
+				}
+			
+				.give-fee-recovery-donors-choice.give-fee-message:hover,
+				.give-fee-recovery-donors-choice.give-fee-message:focus-within,
+				.give-fee-recovery-donors-choice.give-fee-message.active {
+					border: 1px solid #28C77B;
+				}
+				.give-fee-message-label input[type='checkbox']:focus + span::before {
+					border-color: #28C77B;
+				}
+				.give-fee-recovery-donors-choice.give-fee-message input[type='checkbox'] + .give-fee-message-label-text::after {
+					background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.73047 10.7812C6.00391 11.0547 6.46875 11.0547 6.74219 10.7812L14.7812 2.74219C15.0547 2.46875 15.0547 2.00391 14.7812 1.73047L13.7969 0.746094C13.5234 0.472656 13.0859 0.472656 12.8125 0.746094L6.25 7.30859L3.16016 4.24609C2.88672 3.97266 2.44922 3.97266 2.17578 4.24609L1.19141 5.23047C0.917969 5.50391 0.917969 5.96875 1.19141 6.24219L5.73047 10.7812Z' fill='%2328C77B'/%3E%3C/svg%3E%0A");
+				}
+			body, button, input, select{font-family: 'Montserrat', sans-serif;}
+</style>
+<script type="text/javascript" id="give-stripe-js-js-extra">
+/* <![CDATA[ */
+var give_stripe_vars = {"zero_based_currency":"","zero_based_currencies_list":["JPY","KRW","CLP","ISK","BIF","DJF","GNF","KHR","KPW","LAK","LKR","MGA","MZN","VUV"],"sitename":"Dads Lane Community Association","checkoutBtnTitle":"Donate","publishable_key":"pk_live_51Hr7ZgAst7Rd5pnWc5sLXz5ptROmDIxrJcZ2UfllB4kEdrvjvNwGA3coEN3TGlyUqKpVk38kUjqpQMahiWDwHxiq00A0taTJNE","checkout_image":"","checkout_address":"","checkout_processing_text":"Donation Processing...","give_version":"3.1.1","cc_fields_format":"multi","card_number_placeholder_text":"Card Number","card_cvc_placeholder_text":"CVC","donate_button_text":"Donate Now","element_font_styles":{"cssSrc":"https:\/\/fonts.googleapis.com\/css2?family=Montserrat&display=swap"},"element_base_styles":{"fontFamily":"Montserrat","color":"#8d8e8e","fontWeight":400,"fontSize":"14px","::placeholder":{"color":"#8d8e8e"},":-webkit-autofill":{"color":"#e39f48"}},"element_complete_styles":{},"element_empty_styles":{},"element_invalid_styles":{},"float_labels":"","base_country":"GB","preferred_locale":"en","stripe_card_update":"","stripe_becs_update":""};
+var give_stripe_vars = {"zero_based_currency":"","zero_based_currencies_list":["JPY","KRW","CLP","ISK","BIF","DJF","GNF","KHR","KPW","LAK","LKR","MGA","MZN","VUV"],"sitename":"Dads Lane Community Association","checkoutBtnTitle":"Donate","publishable_key":"pk_live_51Hr7ZgAst7Rd5pnWc5sLXz5ptROmDIxrJcZ2UfllB4kEdrvjvNwGA3coEN3TGlyUqKpVk38kUjqpQMahiWDwHxiq00A0taTJNE","checkout_image":"","checkout_address":"","checkout_processing_text":"Donation Processing...","give_version":"3.1.1","cc_fields_format":"multi","card_number_placeholder_text":"Card Number","card_cvc_placeholder_text":"CVC","donate_button_text":"Donate Now","element_font_styles":{"cssSrc":"https:\/\/fonts.googleapis.com\/css2?family=Montserrat&display=swap"},"element_base_styles":{"fontFamily":"Montserrat","color":"#8d8e8e","fontWeight":400,"fontSize":"14px","::placeholder":{"color":"#8d8e8e"},":-webkit-autofill":{"color":"#e39f48"}},"element_complete_styles":{},"element_empty_styles":{},"element_invalid_styles":{},"float_labels":"","base_country":"GB","preferred_locale":"en","stripe_card_update":"","stripe_becs_update":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://js.stripe.com/v3/?ver=3.1.1" id="give-stripe-js-js"></script>
+<script type="text/javascript" src="../wp-content/plugins/give/assets/dist/js/give-stripe.js@ver=3.1.1" id="give-stripe-onpage-js-js"></script>
+<script type="text/javascript" src="../wp-includes/js/jquery/jquery.min.js@ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="../wp-includes/js/jquery/jquery-migrate.min.js@ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="../wp-includes/js/dist/vendor/wp-polyfill-inert.min.js@ver=3.1.2" id="wp-polyfill-inert-js"></script>
+<script type="text/javascript" src="../wp-includes/js/dist/vendor/regenerator-runtime.min.js@ver=0.14.0" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="../wp-includes/js/dist/vendor/wp-polyfill.min.js@ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="../wp-includes/js/dist/hooks.min.js@ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="../wp-includes/js/dist/i18n.min.js@ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="give-js-extra">
+/* <![CDATA[ */
+var give_global_vars = {"ajaxurl":"https:\/\/www.dlca.co.uk\/wp-admin\/admin-ajax.php","checkout_nonce":"a07b683f76","currency":"GBP","currency_sign":"\u00a3","currency_pos":"before","thousands_separator":",","decimal_separator":".","no_gateway":"Please select a payment method.","bad_minimum":"The minimum custom donation amount for this form is","bad_maximum":"The maximum custom donation amount for this form is","general_loading":"Loading...","purchase_loading":"Please Wait...","textForOverlayScreen":"<h3>Processing...<\/h3><p>This will only take a second!<\/p>","number_decimals":"0","is_test_mode":"","give_version":"3.1.1","magnific_options":{"main_class":"give-modal","close_on_bg_click":false},"form_translation":{"payment-mode":"Please select payment mode.","give_first":"Please enter your first name.","give_last":"Please enter your last name.","give_email":"Please enter a valid email address.","give_user_login":"Invalid email address or username.","give_user_pass":"Enter a password.","give_user_pass_confirm":"Enter the password confirmation.","give_agree_to_terms":"You must agree to the terms and conditions."},"confirm_email_sent_message":"Please check your email and click on the link to access your complete donation history.","ajax_vars":{"ajaxurl":"https:\/\/www.dlca.co.uk\/wp-admin\/admin-ajax.php","ajaxNonce":"0cd3be55b4","loading":"Loading","select_option":"Please select an option","default_gateway":"gocardless","permalinks":"1","number_decimals":0},"cookie_hash":"c6c83af723b0694dd2c3b09f66421204","session_nonce_cookie_name":"wp-give_session_reset_nonce_c6c83af723b0694dd2c3b09f66421204","session_cookie_name":"wp-give_session_c6c83af723b0694dd2c3b09f66421204","delete_session_nonce_cookie":"0"};
+var giveApiSettings = {"root":"https:\/\/www.dlca.co.uk\/wp-json\/give-api\/v2\/","rest_base":"give-api\/v2"};
+var give_global_vars = {"ajaxurl":"https:\/\/www.dlca.co.uk\/wp-admin\/admin-ajax.php","checkout_nonce":"a07b683f76","currency":"GBP","currency_sign":"\u00a3","currency_pos":"before","thousands_separator":",","decimal_separator":".","no_gateway":"Please select a payment method.","bad_minimum":"The minimum custom donation amount for this form is","bad_maximum":"The maximum custom donation amount for this form is","general_loading":"Loading...","purchase_loading":"Please Wait...","textForOverlayScreen":"<h3>Processing...<\/h3><p>This will only take a second!<\/p>","number_decimals":"0","is_test_mode":"","give_version":"3.1.1","magnific_options":{"main_class":"give-modal","close_on_bg_click":false},"form_translation":{"payment-mode":"Please select payment mode.","give_first":"Please enter your first name.","give_last":"Please enter your last name.","give_email":"Please enter a valid email address.","give_user_login":"Invalid email address or username.","give_user_pass":"Enter a password.","give_user_pass_confirm":"Enter the password confirmation.","give_agree_to_terms":"You must agree to the terms and conditions."},"confirm_email_sent_message":"Please check your email and click on the link to access your complete donation history.","ajax_vars":{"ajaxurl":"https:\/\/www.dlca.co.uk\/wp-admin\/admin-ajax.php","ajaxNonce":"0cd3be55b4","loading":"Loading","select_option":"Please select an option","default_gateway":"gocardless","permalinks":"1","number_decimals":0},"cookie_hash":"c6c83af723b0694dd2c3b09f66421204","session_nonce_cookie_name":"wp-give_session_reset_nonce_c6c83af723b0694dd2c3b09f66421204","session_cookie_name":"wp-give_session_c6c83af723b0694dd2c3b09f66421204","delete_session_nonce_cookie":"0"};
+var giveApiSettings = {"root":"https:\/\/www.dlca.co.uk\/wp-json\/give-api\/v2\/","rest_base":"give-api\/v2"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="give-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "give", {"translation-revision-date":"2022-07-05 10:37:04+0000","generator":"GlotPress\/4.0.0-alpha.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_GB"},"Dismiss this notice.":["Dismiss this notice."]}},"comment":{"reference":"assets\/dist\/js\/give.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/give/assets/dist/js/give.js@ver=57b2d8efd8aeef3f" id="give-js"></script>
+<script type="text/javascript" id="give-fee-recovery-js-extra">
+/* <![CDATA[ */
+var give_fee_recovery_object = {"give_fee_zero_based_currency":"[\"JPY\",\"KRW\",\"CLP\",\"ISK\",\"BIF\",\"DJF\",\"GNF\",\"KHR\",\"KPW\",\"LAK\",\"LKR\",\"MGA\",\"MZN\",\"VUV\"]"};
+var give_fee_recovery_object = {"give_fee_zero_based_currency":"[\"JPY\",\"KRW\",\"CLP\",\"ISK\",\"BIF\",\"DJF\",\"GNF\",\"KHR\",\"KPW\",\"LAK\",\"LKR\",\"MGA\",\"MZN\",\"VUV\"]"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/give-fee-recovery/assets/js/give-fee-recovery-public.min.js@ver=1.9.7" id="give-fee-recovery-js"></script>
+<script type="text/javascript" id="give-gift-aid-js-extra">
+/* <![CDATA[ */
+var give_gift_aid_vars = {"gift_aid_site_url":"https:\/\/www.dlca.co.uk","gift_aid_base_country":"GB"};
+var give_gift_aid_vars = {"gift_aid_site_url":"https:\/\/www.dlca.co.uk","gift_aid_base_country":"GB"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/give-gift-aid/assets/js/give-gift-aid-frontend.min.js@ver=1.3.0" id="give-gift-aid-js"></script>
+<script type="text/javascript" id="give_recurring_script-js-extra">
+/* <![CDATA[ */
+var Give_Recurring_Vars = {"email_access":"1","pretty_intervals":{"1":"Every","2":"Every two","3":"Every three","4":"Every four","5":"Every five","6":"Every six"},"pretty_periods":{"day":"Daily","week":"Weekly","month":"Monthly","quarter":"Quarterly","half-year":"Semi-Annually","year":"Yearly"},"messages":{"daily_forbidden":"The selected payment method does not support daily recurring giving. Please select another payment method or supported giving frequency.","confirm_cancel":"Are you sure you want to cancel this subscription?"},"multi_level_message_pre_text":"You have chosen to donate"};
+var Give_Recurring_Vars = {"email_access":"1","pretty_intervals":{"1":"Every","2":"Every two","3":"Every three","4":"Every four","5":"Every five","6":"Every six"},"pretty_periods":{"day":"Daily","week":"Weekly","month":"Monthly","quarter":"Quarterly","half-year":"Semi-Annually","year":"Yearly"},"messages":{"daily_forbidden":"The selected payment method does not support daily recurring giving. Please select another payment method or supported giving frequency.","confirm_cancel":"Are you sure you want to cancel this subscription?"},"multi_level_message_pre_text":"You have chosen to donate"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/give-recurring/assets/js/give-recurring.min.js@ver=2.2.0" id="give_recurring_script-js"></script>
+<meta name='robots' content='noindex,nofollow'/>
+        </head>
+        <body class="give-form-templates">
+        	<div id="give-form-12542-wrap" class="give-form-wrap give-recurring-form-wrap give-recurring-form-donor give-embed-form give-viewing-form-in-iframe">
+		<div class="give-form-navigator">
+    <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+    <p class="title"></p>
+</div>
+			<form id="give-form-12542-1" class="give-form give-form-12542 give-form-type-multi give-recurring-form" action="https://www.dlca.co.uk/give/renovation/?payment-mode=gocardless&form-id=12542" data-id="12542-1" data-currency_symbol="&pound;" data-currency_code="GBP" data-currency_position="before" data-thousands_separator="," data-decimal_separator="." data-number_decimals="0" data-publishable-key="pk_live_51Hr7ZgAst7Rd5pnWc5sLXz5ptROmDIxrJcZ2UfllB4kEdrvjvNwGA3coEN3TGlyUqKpVk38kUjqpQMahiWDwHxiq00A0taTJNE" data-account="" data-stripe-checkout-type="redirect" method="post">
+				<!-- The following field is for robots only, invisible to humans: -->
+				<span class="give-hidden" style="display: none !important;">
+					<label for="give-form-honeypot-12542"></label>
+					<input id="give-form-honeypot-12542" type="text" name="give-honeypot"
+						   class="give-honeypot give-hidden"/>
+				</span>
+
+					<input type="hidden" name="give-form-id-prefix" value="12542-1"/>
+	<input type="hidden" name="give-form-id" value="12542"/>
+	<input type="hidden" name="give-form-title" value="Renovation Project"/>
+	<input type="hidden" name="give-current-url" value="https://www.dlca.co.uk/give/renovation/"/>
+	<input type="hidden" name="give-form-url" value="https://www.dlca.co.uk/give/renovation/"/>
+			<input type="hidden" name="give-form-minimum"
+			   value="5"/>
+		<input type="hidden" name="give-form-maximum"
+			   value="1000000"/>
+		<input type="hidden"  name="give-form-hash" value="9366b47b34" data-time="1701778414" data-nonce-life="86400" data-donor-session="0"/><input type="hidden" name="give-price-id" value="3"/>
+<div class="give-section introduction">
+    <h2 class="headline">
+        Re-building a brick at a time    </h2>
+            <div class="seperator"></div>
+        <p class="description">
+            Could you make donation (big or small) to help rebuild the community centre? Together we can create a great space for the neighbourhood now and the future...        </p>
+                <div class="image">
+            <img src="https://dlca.co.uk/wp-content/uploads/2020/12/DLCA-blueprint-1.png" />
+        </div>
+    
+            <div class="income-stats">
+        <div class="raised">
+            <div class="number">
+                &pound;4,215            </div>
+            <div class="text">raised</div>
+        </div>
+        <div class="count">
+            <div class="number">
+                28            </div>
+            <div class="text">donations</div>
+        </div>
+        <div class="goal">
+            <div class="number">
+                &pound;40,000            </div>
+            <div class="text">goal</div>
+        </div>
+    </div>
+        <div class="progress-bar">
+        <div class="give-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10.36">
+            <span style="width:10.36%;;background: linear-gradient(180deg, #2bc253 0%, #2bc253 100%), linear-gradient(180deg, #fff 0%, #ccc 100%); background-blend-mode: multiply;"></span>
+        </div><!-- /.give-progress-bar -->
+    </div>
+<button class="give-btn advance-btn">Donate now<i class="fas fa-chevron-right"></i></button></div><div class="give-section choose-amount"><p class="content">How much would you like to donate? As a contributor to Dads Lane Community Association, we make sure your donation goes directly to supporting our cause. Thank you for your generosity!</p>	<input type="hidden" name="give-recurring-logged-in-only"
+		   class="give-recurring-logged-in-only"
+		   value=""/>
+
+	<input type="hidden" name="give-logged-in-only"
+		   class="give-logged-in-only"
+		   value="1"/>
+<input
+					type="hidden"
+					name="_give_is_donation_recurring"
+					class="_give_is_donation_recurring"
+					id="_give_is_donation_recurring"
+					value="0"
+					data-_give_recurring="yes_donor"
+					data-_give_checkbox_default="no"
+                    data-_give_price_option=""
+                /><input
+					type="hidden"
+					name="give_recurring_donation_details"
+					class="give_recurring_donation_details"
+					id="give_recurring_donation_details"
+					value="{&quot;give_recurring_option&quot;:&quot;yes_donor&quot;}"
+                />		<div class="give-total-wrap">
+			<div class="give-donation-amount form-row-wide">
+				<span class="give-currency-symbol give-currency-position-before">&pound;</span>				<label class="give-hidden" for="give-amount">Donation Amount:</label>
+				<input class="give-text-input give-amount-top" id="give-amount" name="give-amount" type="text" inputmode="decimal"
+					   placeholder="" value="100" autocomplete="off">
+							</div>
+		</div>
+		<ul id="give-donation-level-button-wrap" class="give-donation-levels-wrap give-list-inline"><li><button type="button" data-price-id="0" class="give-donation-level-btn give-btn give-btn-level-0 " value="10" data-default="0">&pound;10</button></li><li><button type="button" data-price-id="1" class="give-donation-level-btn give-btn give-btn-level-1 " value="25" data-default="0">&pound;25</button></li><li><button type="button" data-price-id="2" class="give-donation-level-btn give-btn give-btn-level-2 " value="50" data-default="0">&pound;50</button></li><li><button type="button" data-price-id="3" class="give-donation-level-btn give-btn give-btn-level-3 give-default-level" value="100" data-default="1">&pound;100</button></li><li><button type="button" data-price-id="5" class="give-donation-level-btn give-btn give-btn-level-5 " value="250" data-default="0">&pound;250</button></li><li><button type="button" data-price-id="custom" class="give-donation-level-btn give-btn give-btn-level-custom" value="custom">Custom Amount</button></li></ul>			<input type="hidden" value="1" class="give-fee-disable"/>
+			
+                <fieldset class="give-fee-recovery-donors-choice give-fee-message form-row"
+                          id="give-fee-recovery-wrap-12542-1">
+                    <legend class="give-fee-message-legend"
+                            style="display: none;">Would you like to help cover the processing fees?</legend>
+
+                    <label
+                            for="give_fee_mode_checkbox-12542-1"
+                            class="give-fee-message-label"
+                            data-feemessage="I&#039;d like to help cover the transaction fees of {fee_amount} for my donation."
+                            style="font-weight:normal; cursor: pointer;"
+                    >
+                        <input
+                                name="give_fee_mode_checkbox"
+                                type="checkbox"
+                                id="give_fee_mode_checkbox-12542-1"
+                                class="give_fee_mode_checkbox"
+                                value="0"
+							                        />
+                        <span class="give-fee-message-label-text">I&#039;d like to help cover the transaction fees of 0 for my donation.</span>
+                    </label>
+                </fieldset>
+					<div class="give-recurring-donors-choice">
+		<input id="give-admin_choice-12542" class="give-recurring-period" name="give-recurring-period" type="checkbox" data-period-label="Monthly" data-period="month" data-interval="1"  /> <label for="give-admin_choice-12542">Make this donation monthly</label>	</div>
+	<input id="give-stripe-payment-method-12542-1" type="hidden" name="give_stripe_payment_method" value=""><input type="hidden" name="give-fee-recovery-settings" value="{&quot;fee_data&quot;:{&quot;all_gateways&quot;:{&quot;percentage&quot;:&quot;2.000000&quot;,&quot;base_amount&quot;:&quot;0.200000&quot;,&quot;give_fee_disable&quot;:false,&quot;give_fee_status&quot;:true,&quot;is_break_down&quot;:true,&quot;maxAmount&quot;:&quot;0&quot;}},&quot;give_fee_status&quot;:true,&quot;give_fee_disable&quot;:false,&quot;is_break_down&quot;:true,&quot;fee_mode&quot;:&quot;donor_opt_in&quot;,&quot;is_fee_mode&quot;:true,&quot;fee_recovery&quot;:true}" /><button class="give-btn advance-btn">Continue<i class="fas fa-chevron-right"></i></button></div><div class="give-section payment"><div class="heading">Who's giving today?</div><div class="subheading">We’ll never share this information with anyone.</div>	<fieldset id="give_checkout_user_info" class="">
+		<legend>
+			Personal Info		</legend>
+
+		
+        <p id="give-first-name-wrap" class="form-row form-row-first form-row-responsive">
+            <label class="give-label" for="give-first">
+                First Name                                    <span class="give-required-indicator">*</span>
+                                <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="First Name is used to personalise your donation record." rel="tooltip"><i class="give-icon give-icon-question"></i></span>            </label>
+            <input
+                class="give-input required"
+                type="text"
+                name="give_first"
+                autocomplete="given-name"
+                placeholder="First Name"
+                id="give-first"
+                value=""
+                 required aria-required="true"             />
+        </p>
+
+        <p id="give-last-name-wrap" class="form-row form-row-last form-row-responsive">
+            <label class="give-label" for="give-last">
+                Last Name                                    <span class="give-required-indicator">*</span>
+                                <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="Last Name is used to personalise your donation record." rel="tooltip"><i class="give-icon give-icon-question"></i></span>            </label>
+
+            <input
+                class="give-input required"
+                type="text"
+                name="give_last"
+                autocomplete="family-name"
+                id="give-last"
+                placeholder="Last Name"
+                value=""
+                 required aria-required="true"             />
+        </p>
+
+                        <div id="give-company-radio-list-wrap" class="form-row form-row-wide">
+                    <label>Is this donation on behalf of a company?</label>
+                    <ul id="give-company-name-radio-list" class="give-company-radio-list">
+                        <li>
+                            <input
+                                checked
+                                type="radio"
+                                id="give-no-company"
+                                class="give_company_option"
+                                name="give_company_option"
+                                value="no"
+                            />
+                            <label for="give-no-company" class="give-company-option"
+                                   id="give-no-company">
+                                No                            </label>
+                        </li>
+                        <li>
+                            <input
+                                type="radio"
+                                id="give-has-company"
+                                class="give_company_option"
+                                name="give_company_option"
+                                value="yes"
+                            />
+                            <label for="give-has-company" class="give-company-option"
+                                   id="give-has-company">
+                                Yes                            </label>
+                        </li>
+                    </ul>
+                </div>
+                        <p id="give-company-wrap" class="form-row form-row-wide">
+                <label class="give-label" for="give-company">
+                    Company Name                                        <span class="give-tooltip hint--top hint--bounce" aria-label="Donate on behalf of Company" rel="tooltip"><i class="give-icon give-icon-question"></i></span>                </label>
+                <input
+                    class="give-input"
+                    type="text"
+                    name="give_company_name"
+                    placeholder="Company Name"
+                    id="give-company"
+                    value=""
+                                    />
+            </p>
+        
+                <p id="give-email-wrap" class="form-row form-row-wide">
+            <label class="give-label" for="give-email">
+                Email Address                                    <span class="give-required-indicator">*</span>
+                                    <span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="We will send the donation receipt to this address." rel="tooltip"><i class="give-icon give-icon-question"></i></span>            </label>
+            <input
+                class="give-input required"
+                type="email"
+                name="give_email"
+                autocomplete="email"
+                placeholder="Email Address"
+                id="give-email"
+                value=""
+                 required aria-required="true"             />
+
+        </p>
+
+                                <p id="give-anonymous-donation-wrap" class="form-row form-row-wide">
+                <label class="give-label" for="give-anonymous-donation">
+                    <input
+                        type="checkbox"
+                        class="give-input"
+                        name="give_anonymous_donation"
+                        id="give-anonymous-donation"
+                        value="1"
+                                                                    >
+                    Make this an anonymous donation.					<span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="Would you like to prevent your name, image, and comment from being displayed publicly?" rel="tooltip"><i class="give-icon give-icon-question"></i></span>
+				</label>
+			</p>
+		
+					<p id="give-comment-wrap" class="form-row form-row-wide">
+				<label class="give-label" for="give-comment">
+					Comment										<span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="Would you like to add a comment to this donation?" rel="tooltip"><i class="give-icon give-icon-question"></i></span>				</label>
+
+				<textarea
+					class="give-input"
+					name="give_comment"
+					placeholder="Leave a comment"
+					id="give-comment"
+									></textarea>
+
+			</p>
+					</fieldset>
+	
+	<fieldset id="give-payment-mode-select">
+				<legend
+			class="give-payment-mode-label">Select Payment Method			<span class="give-loading-text"><span
+					class="give-loading-animation"></span>
+			</span>
+		</legend>
+
+		<div id="give-payment-mode-wrap">
+						<ul id="give-gateway-radio-list">
+										<li class="give-gateway-option-selected">
+							<input type="radio" name="payment-mode" class="give-gateway"
+								   id="give-gateway-gocardless-12542-1"
+								   value="gocardless" checked='checked'>
+							<label for="give-gateway-gocardless-12542-1"
+								   class="give-gateway-option"
+								   id="give-gateway-option-gocardless"> Donate with Direct Debit (regular monthly donations)</label>
+						</li>
+												<li>
+							<input type="radio" name="payment-mode" class="give-gateway"
+								   id="give-gateway-stripe_checkout-12542-1"
+								   value="stripe_checkout">
+							<label for="give-gateway-stripe_checkout-12542-1"
+								   class="give-gateway-option"
+								   id="give-gateway-option-stripe_checkout"> Donate with Debit or Credit Card (one off donations)</label>
+						</li>
+									</ul>
+					</div>
+			</fieldset>
+
+	
+	<div id="give_purchase_form_wrap">
+
+			<fieldset id="give_cc_address" class="cc-address">
+		<legend>Billing Details</legend>
+				<p id="give-card-country-wrap" class="form-row form-row-wide">
+			<label for="billing_country" class="give-label">
+				Country									<span class="give-required-indicator">*</span>
+								<span class="give-tooltip give-icon give-icon-question"
+					  data-tooltip="The country for your billing address."></span>
+			</label>
+
+			<select
+				name="billing_country"
+				autocomplete="country"
+				id="billing_country"
+				class="billing-country billing_country give-select required"
+				 required aria-required="true" 			>
+				<option value=""></option><option value="US">United States</option><option value="CA">Canada</option><option value="GB" selected='selected'>United Kingdom</option><option value="AF">Afghanistan</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei Darrussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CD">Congo, Democratic People&#039;s Republic</option><option value="CG">Congo, Republic of</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Cote d&#039;Ivoire</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="TP">East Timor</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="GQ">Equatorial Guinea</option><option value="SV">El Salvador</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GR">Greece</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and McDonald Islands</option><option value="VA">Holy See (City Vatican State)</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Lao People&#039;s Democratic Republic</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libyan Arab Jamahiriya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestinian Territories</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn Island</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion Island</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovak Republic</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="KR">South Korea</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen Islands</option><option value="SZ">Eswatini</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syrian Arab Republic</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TH">Thailand</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="UY">Uruguay</option><option value="UM">US Minor Outlying Islands</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (USA)</option><option value="WF">Wallis and Futuna Islands</option><option value="EH">Western Sahara</option><option value="WS">Western Samoa</option><option value="YE">Yemen</option><option value="YU">Yugoslavia</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>			</select>
+		</p>
+
+		<p id="give-card-address-wrap" class="form-row form-row-wide">
+			<label for="card_address" class="give-label">
+				Address 1									<span class="give-required-indicator">*</span>
+								<span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="The primary billing address for your credit card." rel="tooltip"><i class="give-icon give-icon-question"></i></span>			</label>
+
+			<input
+				type="text"
+				id="card_address"
+				name="card_address"
+				autocomplete="address-line1"
+				class="card-address give-input required"
+				placeholder="Address line 1"
+				value=""
+				  required aria-required="true" 			/>
+		</p>
+
+		<p id="give-card-address-2-wrap" class="form-row form-row-wide">
+			<label for="card_address_2" class="give-label">
+				Address 2								<span class="give-tooltip hint--top hint--medium hint--bounce" aria-label="(optional) The suite, apartment number, post office box (etc) associated with your billing address." rel="tooltip"><i class="give-icon give-icon-question"></i></span>			</label>
+
+			<input
+				type="text"
+				id="card_address_2"
+				name="card_address_2"
+				autocomplete="address-line2"
+				class="card-address-2 give-input"
+				placeholder="Address line 2"
+				value=""
+							/>
+		</p>
+
+		<p id="give-card-city-wrap" class="form-row form-row-wide">
+			<label for="card_city" class="give-label">
+				City									<span class="give-required-indicator ">*</span>
+								<span class="give-tooltip hint--top hint--bounce" aria-label="The city for your billing address." rel="tooltip"><i class="give-icon give-icon-question"></i></span>			</label>
+			<input
+				type="text"
+				id="card_city"
+				name="card_city"
+				autocomplete="address-level2"
+				class="card-city give-input required"
+				placeholder="City"
+				value=""
+				 required aria-required="true" 			/>
+		</p>
+
+				<p id="give-card-state-wrap"
+		   class="form-row form-row-first form-row-responsive  ">
+			<label for="card_state" class="give-label">
+				<span class="state-label-text">County</span>
+				<span
+					class="give-required-indicator give-hidden ">*</span>
+				<span class="give-tooltip give-icon give-icon-question"
+					  data-tooltip="The state, province, or county for your billing address."></span>
+			</label>
+							<input type="text" size="6" name="card_state" id="card_state" class="card_state give-input"
+					   placeholder="County" value="Birmingham"
+									/>
+					</p>
+
+		<p id="give-card-zip-wrap" class="form-row form-row-last form-row-responsive">
+			<label for="card_zip" class="give-label">
+				Zip / Postal Code				<span class="give-required-indicator">*</span>
+				<span class="give-tooltip hint--top hint--bounce" aria-label="The postcode for your billing address." rel="tooltip"><i class="give-icon give-icon-question"></i></span>			</label>
+
+			<input
+				type="text"
+				size="4"
+				id="card_zip"
+				name="card_zip"
+				autocomplete="postal-code"
+				class="card-zip give-input required"
+				placeholder="Zip / Postal Code"
+				value=""
+				 required aria-required="true" 			/>
+		</p>
+			</fieldset>
+				<fieldset id="give-gift-aid-dedicate-donation-12542" class="give-gift-aid-dedicate-donation"> <!-- Give - Gift Aid Start -->
+				<input
+						type="hidden"
+						name="give_gift_check_is_billing_address"
+						value=""
+						id="give-gift-check-is-billing-address-12542"
+						class="give-gift-check-is-billing-address"
+				/>
+				<legend>Reclaim Gift Aid</legend>
+				<div id="give-gift-aid-explanation-content-wrap-12542" class="form-row form-row-responsive">
+					<p><img style="max-width: 200px;width: 30%;float: right;text-align: center" src="https://dlca.co.uk/wp-content/plugins/give-gift-aid/assets/images/gift-aid-logo.png" alt="Gift Aid It!" /><strong>Add 25% more to your donation at no cost to you.</strong> A Gift Aid declaration allows Dads Lane Community Association to claim tax back on eligible donations. It means that for every £1 you donate to Dads Lane Community Association we can claim back 25p, at no extra cost to you.</p>
+											<div style="display: block; float: left; clear: both;" class="give-gift-aid-explanation-content-more-wrap">
+							<a href="javascript:void(0);" class="give-gift-aid-explanation-content-more">Tell me more &raquo;</a>
+						</div>
+									</div>
+				<div id="give-gift-aid-checkbox-label-wrap-12542" class="form-row form-row-responsive">
+					<input
+							type="checkbox"
+							id="give-gift-aid-accept-term-condition-12542"
+							name="give_gift_aid_accept_term_condition"
+							class="give_gift_aid_accept_term_condition"
+							style="display: inline; width: 13px; vertical-align: middle; cursor: pointer;"
+					/>
+					<label for="give-gift-aid-accept-term-condition-12542"
+					       style="cursor: pointer; display: inline; width: calc(100% - 24px); vertical-align: top;" class="give-gift-aid-accept-term-condition">
+						Yes, I would like to claim Gift Aid					</label>
+					<p style="font-size: 12px; margin-top: 5px; color: #9a9a9a; font-style: italic;">
+						By ticking the "Yes" box, I agree I would like Dads Lane Community Association to reclaim the tax on all qualifying donations I have made, as well as any future donations, until I notify them otherwise. I understand that if I pay less Income Tax and/or Capital Gains Tax than the amount of Gift Aid claimed on all my donations in that tax year I may be asked to pay any difference. I understand that Dads Lane Community Association will reclaim 25p of tax on every £1 that I give.					</p>
+				</div>
+									<div id="give-gift-aid-long-explanation-wrap-12542" class="give-gift-aid-long-explanation-wrap mfp-hide"
+					     data-id="12542">
+						<div id="give-gift-aid-long-explanation-content-12542" class="give-gift-aid-long-explanation-content">
+							<h1><strong>What is Gift Aid?</strong></h1>
+<p>Gift Aid does not cost you a penny more, but can add an additional 25p to every £1 you donate. When Dads Lane Community Association receives a donation from a UK taxpayer, we're entitled to claim an amount of tax (calculated at the basic rate of income tax in that year) paid on that donation. Once you have given your permission for us to do this on your behalf, there is no need for you to do anything else.</p>
+<p>All that is required is that you must be a taxpayer and that would have paid or will pay sufficient Income and/or Capital Gains Tax to cover all the Gift Aid claimed on all your donations in that tax year. Please note that it is your responsibility to pay any difference.</p>
+<p>The amount of tax we claim will be 25% of the total value of your donations in that tax year. Furthermore, if you are a higher taxpayer, you are also entitled to claim the difference between the basic rate which we will claim and the amount of tax you have actually paid. For further details on how you can do this, please contact your tax office. If your tax situation changes and your gifts will no longer be eligible for the Gift Aid scheme please contact us and we will amend your record accordingly.</p>
+							<a href="javascript:void(0);" class="give_gift_aid_take_to_my_donation">Take me to my donation &raquo;</a>
+						</div>
+					</div>
+								<div id="give-gift-aid-address-wrap-12542" class="give-gift-aid-address-wrap form-row">
+					<div id="give-gift-aid-address-button-12542">
+						<label>
+							Gift Aid Address						</label>
+						<ul id="give-gift-aid-address-radio-list-12542" class="give-gift-aid-address-radio-list">
+							<li>
+								<input
+										checked
+										type="radio"
+										id="give-gift-aid-address-manual-12542"
+										class="give_gift_aid_address_option"
+										name="give_gift_aid_address_option"
+										value="billing_address"
+								/>
+								<label for="give-gift-aid-address-manual-12542" class="give-gift-aid-address-option"
+								       id="give-gift-aid-address-12542">
+									Please use the billing details address								</label>
+							</li>
+							<li>
+								<input
+										type="radio"
+										id="give-gift-aid-another-address-12542"
+										class="give_gift_aid_address_option"
+										name="give_gift_aid_address_option"
+										value="another_address"
+								/>
+								<label for="give-gift-aid-another-address-12542" class="give-gift-aid-address-option"
+								       id="give-gift-aid-address-12542">
+									I&#039;d like to use another address								</label>
+							</li>
+						</ul>
+					</div>
+						<div id="give-gift-aid-address-fields-12542" class="give-gift-aid-address-fields">
+			<p id="give-gift-aid-country-wrap-12542" class="form-row form-row-responsive">
+		<label for="give_gift_aid_billing_country_12542" class="give-label">
+			Country			<span class="give-required-indicator">*</span>
+			<span class="give-tooltip give-icon give-icon-question"
+			      data-tooltip="The country for your Gift Aid claim must be the UK."></span>
+		</label>
+		<select
+			name="give_gift_aid_billing_country"
+			id="give_gift_aid_billing_country_12542"
+			class="give-gift-aid-billing-country billing_country give-select required"
+			required
+			aria-required="true"
+			autocomplete="country-name"
+		>
+			<option value="GB" selected='selected'>United Kingdom</option>		</select>
+	</p>
+		<p id="give-gift-aid-address-wrap-12542" class="form-row form-row-responsive">
+		<label for="give_gift_aid_card_address_12542" class="give-label">
+			Address 1			<span class="give-required-indicator">*</span>
+			<span class="give-tooltip give-icon give-icon-question"
+			      data-tooltip="The primary address of your Gift Aid claim."></span>
+		</label>
+		<input
+			type="text"
+			id="give_gift_aid_card_address_12542"
+			name="give_gift_aid_card_address"
+			class="give-gift-aid-card-address required give-input"
+			placeholder="Address line 1"
+			value=""
+			aria-required="true"
+			autocomplete="address-line1"
+		/>
+	</p>
+		<p id="give-gift-aid-address2-wrap-12542" class="form-row form-row-responsive">
+		<label for="give_gift_aid_card_address_2_12542" class="give-label">
+			Address 2			<span class="give-tooltip give-icon give-icon-question"
+			      data-tooltip="(optional) The secondary address for your Gift Aid claim. Typically an apartment or unit number."></span>
+		</label>
+		<input
+			type="text"
+			id="give_gift_aid_card_address_2_12542"
+			name="give_gift_aid_card_address_2"
+			class="give-gift-aid-card-address required give-input"
+			placeholder="Address line 2"
+			value=""
+			autocomplete="address-line2"
+		/>
+	</p>
+		<p id="give-gift-aid-city-wrap-12542" class="form-row form-row-responsive form-row-wide">
+		<label for="give_gift_aid_card_city_12542" class="give-label">
+			City			<span class="give-required-indicator">*</span>
+			<span class="give-tooltip give-icon give-icon-question"
+			      data-tooltip="The city for your Gift Aid claim."></span>
+		</label>
+		<input
+			type="text"
+			id="give_gift_aid_card_city_12542"
+			name="give_gift_aid_card_city"
+			class="give-gift-aid-card-city required give-input"
+			placeholder="City"
+			value=""
+			aria-required="true"
+			autocomplete="address-level2"
+		/>
+	</p>
+		<p id="give-gift-aid-state-wrap-12542" class="form-row form-row-responsive form-row-first">
+		<label for="give_gift_aid_card_state_12542"
+		       class="give_gift_aid_address_state_label give-label">
+			County			<span class="give-required-indicator">*</span>
+			<span class="give-tooltip give-icon give-icon-question"
+			      data-tooltip="The county for your Gift Aid address."></span>
+		</label>
+					<input
+				type="text"
+				size="6"
+				name="give_gift_aid_card_state"
+				id="give_gift_aid_card_state_12542"
+				class="give-gift-aid-card-state give-input required"
+				placeholder="County"
+				autocomplete="address-level1"
+			/>
+			</p>
+		<p id="give-gift-aid-zip-wrap-12542" class="form-row form-row-last form-row-responsive">
+		<label for="give_gift_aid_card_zip_12542" class="give-label">
+			Postal Code			<span class="give-required-indicator">*</span>
+			<span class="give-tooltip give-icon give-icon-question"
+			      data-tooltip="The postal code for your Gift Aid claim."></span>
+		</label>
+		<input
+			type="text"
+			size="4"
+			id="give_gift_aid_card_zip_12542"
+			name="give_gift_aid_card_zip"
+			class="give-gift-aid-card-zip required give-input"
+			placeholder="Postal Code"
+			value=""
+			aria-required="true"
+			autocomplete="postal-code"
+		/>
+	</p>
+		</div>
+					</div>
+			</fieldset> <!-- Give - Gift Aid End -->
+					<div id="give-stripe-payment-errors-12542-1"></div>	<fieldset id="give_purchase_submit" class="give-donation-submit">
+			<p id="give-final-total-wrap" class="form-wrap ">
+				<span class="give-donation-total-label">
+			Donation Total:		</span>
+		<span class="give-final-total-amount"
+			  data-total="100">
+			&pound;100		</span>
+		<span id="give-recurring-modal-period-wrap" class="give-hidden"><span id="give-recurring-modal-period">One Time</span></span>	</p>
+	<p class="fee-break-down-message fee-break-down-message-12542" data-breakdowntext="{amount} donation plus {fee_amount} to help cover fees." style="display: none;">{amount} donation plus {fee_amount} to help cover fees.</p>	<input type="hidden" name="give_action" value="purchase"/>
+	<input type="hidden" name="give-gateway" value="gocardless"/>
+	<input type="hidden" name="give_embed_form" value="1">	<div class="give-submit-button-wrap give-clearfix">
+		<input type="submit" class="give-submit give-btn" id="give-purchase-button" name="give-purchase"
+			   value="Donate now" data-before-validation-label="Donate now"/>
+		<span class="give-loading-animation"></span>
+	</div>
+	</div>	</fieldset>
+	
+	</div>
+
+				</form>
+
+			<div class="form-footer">
+    <div class="navigator-tracker">
+        <button class="step-tracker current" data-step="0"></button>
+        <button class="step-tracker" data-step="1"></button>
+        <button class="step-tracker" data-step="2"></button>
+    </div>
+    <div class="secure-notice">
+                    <i class="fas fa-lock"></i>
+            Secure Donation            </div>
+</div>
+
+	</div><!--end #give-form-12542-->
+	<script type="text/javascript" id="give-donation-summary-script-frontend-js-extra">
+/* <![CDATA[ */
+var GiveDonationSummaryData = {"currencyPrecisionLookup":{"USD":2,"EUR":2,"GBP":2,"AUD":2,"BRL":2,"CAD":2,"CZK":2,"DKK":2,"HKD":2,"HUF":2,"ILS":2,"JPY":0,"MYR":2,"MXN":2,"MAD":2,"NZD":2,"NOK":2,"PHP":2,"PLN":2,"SGD":2,"KRW":0,"ZAR":2,"SEK":2,"CHF":2,"TWD":2,"THB":2,"INR":2,"TRY":2,"IRR":2,"RUB":2,"AED":2,"AMD":2,"ANG":2,"ARS":2,"AWG":2,"BAM":2,"BDT":2,"BHD":3,"BMD":2,"BND":2,"BOB":2,"BSD":2,"BWP":2,"BZD":2,"CLP":0,"CNY":2,"COP":2,"CRC":2,"CUC":2,"CUP":2,"DOP":2,"EGP":2,"GIP":2,"GTQ":2,"HNL":2,"HRK":2,"IDR":2,"ISK":0,"JMD":2,"JOD":2,"KES":2,"KWD":2,"KYD":2,"MKD":2,"NPR":2,"OMR":3,"PEN":2,"PKR":2,"RON":2,"SAR":2,"SZL":2,"TOP":2,"TZS":2,"UAH":2,"UYU":2,"VEF":2,"XCD":2,"AFN":2,"ALL":2,"AOA":2,"AZN":2,"BBD":2,"BGN":2,"BIF":0,"XBT":8,"BTN":1,"BYR":2,"BYN":2,"CDF":2,"CVE":2,"DJF":0,"DZD":2,"ERN":2,"ETB":2,"FJD":2,"FKP":2,"GEL":2,"GGP":2,"GHS":2,"GMD":2,"GNF":0,"GYD":2,"HTG":2,"IMP":2,"IQD":2,"IRT":2,"JEP":2,"KGS":2,"KHR":0,"KMF":2,"KPW":0,"KZT":2,"LAK":0,"LBP":2,"LKR":0,"LRD":2,"LSL":2,"LYD":3,"MDL":2,"MGA":0,"MMK":2,"MNT":2,"MOP":2,"MRO":2,"MUR":2,"MVR":1,"MWK":2,"MZN":0,"NAD":2,"NGN":2,"NIO":2,"PAB":2,"PGK":2,"PRB":2,"PYG":2,"QAR":2,"RSD":2,"RWF":2,"SBD":2,"SCR":2,"SDG":2,"SHP":2,"SLL":2,"SOS":2,"SRD":2,"SSP":2,"STD":2,"SYP":2,"TJS":2,"TMT":2,"TND":3,"TTD":2,"UGX":2,"UZS":2,"VND":1,"VUV":0,"WST":2,"XAF":2,"XOF":2,"XPF":2,"YER":2,"ZMW":2},"recurringLabelLookup":{"day":"Daily","week":"Weekly","month":"Monthly","quarter":"Quarterly","half-year":"Semi-Annually","year":"Yearly"}};
+var GiveDonationSummaryData = {"currencyPrecisionLookup":{"USD":2,"EUR":2,"GBP":2,"AUD":2,"BRL":2,"CAD":2,"CZK":2,"DKK":2,"HKD":2,"HUF":2,"ILS":2,"JPY":0,"MYR":2,"MXN":2,"MAD":2,"NZD":2,"NOK":2,"PHP":2,"PLN":2,"SGD":2,"KRW":0,"ZAR":2,"SEK":2,"CHF":2,"TWD":2,"THB":2,"INR":2,"TRY":2,"IRR":2,"RUB":2,"AED":2,"AMD":2,"ANG":2,"ARS":2,"AWG":2,"BAM":2,"BDT":2,"BHD":3,"BMD":2,"BND":2,"BOB":2,"BSD":2,"BWP":2,"BZD":2,"CLP":0,"CNY":2,"COP":2,"CRC":2,"CUC":2,"CUP":2,"DOP":2,"EGP":2,"GIP":2,"GTQ":2,"HNL":2,"HRK":2,"IDR":2,"ISK":0,"JMD":2,"JOD":2,"KES":2,"KWD":2,"KYD":2,"MKD":2,"NPR":2,"OMR":3,"PEN":2,"PKR":2,"RON":2,"SAR":2,"SZL":2,"TOP":2,"TZS":2,"UAH":2,"UYU":2,"VEF":2,"XCD":2,"AFN":2,"ALL":2,"AOA":2,"AZN":2,"BBD":2,"BGN":2,"BIF":0,"XBT":8,"BTN":1,"BYR":2,"BYN":2,"CDF":2,"CVE":2,"DJF":0,"DZD":2,"ERN":2,"ETB":2,"FJD":2,"FKP":2,"GEL":2,"GGP":2,"GHS":2,"GMD":2,"GNF":0,"GYD":2,"HTG":2,"IMP":2,"IQD":2,"IRT":2,"JEP":2,"KGS":2,"KHR":0,"KMF":2,"KPW":0,"KZT":2,"LAK":0,"LBP":2,"LKR":0,"LRD":2,"LSL":2,"LYD":3,"MDL":2,"MGA":0,"MMK":2,"MNT":2,"MOP":2,"MRO":2,"MUR":2,"MVR":1,"MWK":2,"MZN":0,"NAD":2,"NGN":2,"NIO":2,"PAB":2,"PGK":2,"PRB":2,"PYG":2,"QAR":2,"RSD":2,"RWF":2,"SBD":2,"SCR":2,"SDG":2,"SHP":2,"SLL":2,"SOS":2,"SRD":2,"SSP":2,"STD":2,"SYP":2,"TJS":2,"TMT":2,"TND":3,"TTD":2,"UGX":2,"UZS":2,"VND":1,"VUV":0,"WST":2,"XAF":2,"XOF":2,"XPF":2,"YER":2,"ZMW":2},"recurringLabelLookup":{"day":"Daily","week":"Weekly","month":"Monthly","quarter":"Quarterly","half-year":"Semi-Annually","year":"Yearly"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/plugins/give/assets/dist/js/give-donation-summary.js@ver=3.1.1" id="give-donation-summary-script-frontend-js"></script>
+<script type="text/javascript" id="give-sequoia-template-js-js-extra">
+/* <![CDATA[ */
+var sequoiaTemplateOptions = {"introduction":{"enabled":"enabled","headline":"Re-building a brick at a time","description":"Could you make donation (big or small) to help rebuild the community centre? Together we can create a great space for the neighbourhood now and the future...","image":"https:\/\/dlca.co.uk\/wp-content\/uploads\/2020\/12\/DLCA-blueprint-1.png","primary_color":"#1e5490","donate_label":"Donate now"},"payment_amount":{"header_label":"Choose amount","content":"","next_label":"Continue"},"payment_information":{"header_label":"Add your information","headline":"Who's giving today?","description":"We\u2019ll never share this information with anyone.","checkout_label":"Donate now"},"thank-you":{"image":"","headline":"A great big thank you!","description":"{name}, your contribution means a lot and will be put to good use making a difference. We\u2019ve sent your donation receipt to {donor_email}. ","sharing":"enabled","sharing_instruction":"Help us out by sharing with friends and followers that you supported the cause!","twitter_message":"I just gave to this cause. Who's next?"},"visual_appearance":{"decimals_enabled":"disabled","primary_color":"#28C77B","google-fonts":"enabled"}};
+var sequoiaTemplateL10n = {"optionalLabel":"\u00a0(optional)"};
+var sequoiaTemplateOptions = {"introduction":{"enabled":"enabled","headline":"Re-building a brick at a time","description":"Could you make donation (big or small) to help rebuild the community centre? Together we can create a great space for the neighbourhood now and the future...","image":"https:\/\/dlca.co.uk\/wp-content\/uploads\/2020\/12\/DLCA-blueprint-1.png","primary_color":"#1e5490","donate_label":"Donate now"},"payment_amount":{"header_label":"Choose amount","content":"","next_label":"Continue"},"payment_information":{"header_label":"Add your information","headline":"Who's giving today?","description":"We\u2019ll never share this information with anyone.","checkout_label":"Donate now"},"thank-you":{"image":"","headline":"A great big thank you!","description":"{name}, your contribution means a lot and will be put to good use making a difference. We\u2019ve sent your donation receipt to {donor_email}. ","sharing":"enabled","sharing_instruction":"Help us out by sharing with friends and followers that you supported the cause!","twitter_message":"I just gave to this cause. Who's next?"},"visual_appearance":{"decimals_enabled":"disabled","primary_color":"#28C77B","google-fonts":"enabled"}};
+var sequoiaTemplateL10n = {"optionalLabel":"\u00a0(optional)"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.dlca.co.uk/wp-content/plugins/give/assets/dist/js/give-sequoia-template.js?ver=3.1.1" id="give-sequoia-template-js-js"></script>
+        </body>
+        </html>
+        
